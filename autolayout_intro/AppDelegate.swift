@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  autolayout_intro
 //
-//  Created by PAC on 10/10/17.
-//  Copyright © 2017 PAC. All rights reserved.
+//  Created by John Nik on 10/10/17.
+//  Copyright © 2017 johnik703. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let swipingController = SwipingController(collectionViewLayout: layout)
+        
+        window?.rootViewController = swipingController
+        
         return true
     }
 
